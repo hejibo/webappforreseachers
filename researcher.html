@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>Researcher Main Page</title>
+     <meta charset="UTF-8" />
+	 <link rel="stylesheet" type="text/css" href="researcher.css" />
+	 <script src="researcher.js"></script>
+  </head>
+  
+  <body onload="initSelect()">
+    <header>
+      <div id="header" class="container">
+		<div id="logo">
+			<h1>ReSearch<p>Find what you want</p></h1>
+		</div>
+		<div id="signout">
+		   <input type="button" name="signout" value="Sign out" onClick="signout()"/>
+		</div>
+	  </div>
+    </header>
+	
+    <section>
+	  <!--start of the page-->
+		<div id="page">
+		  <div id="inpage">
+		     <div class="searchdiv">
+			   <br/>
+			   <input type="text" id="searchkeyword" class="enter" onclick="changeSearch()"/>
+			   <input type="button" value="Search" onclick="searchKeyWords()"/>
+			   <div class="searchinfo">
+			    (Please use * to split key words.)
+			   </div>
+ 		     </div>
+			
+			<div id="expcontent">
+			  <div class="expnav">
+				 <h1>Navigation</h1>
+				 <ul>
+				  <li><a href="javascript:showAllExp();">All Research</a></li>
+				  <li><a href="javascript:showpars();">Participants</a></li>
+				  <li><a href="javascript:createnew();">Post a New Study</a></li>
+				  <li><a href="javascript:calender();">Calender</a></li>
+				  <li><a href="composemesssage.html">Message</a></li>
+			      <li><a href="javascript:editInformation();">Edit My Information</a></li>
+				 </ul>
+			  </div>
+			  <div id="showsearch">
+			     <div class="oneexpspace"><h1>Search Results</h1></div>
+				 <div class="oneexp" id="6"></div>
+				 <div class="oneexp" id="7"></div>
+				 <div class="oneexp" id="8"></div>
+				 <div class="oneexp" id="9"></div>
+				 <div class="oneexp" id="10"></div>
+				 <div class="pagecontrol">
+				    Page: <select name="search_result" id="search_result" onchange="pageChange()"></select>
+	                
+				 </div>
+			  </div>
+			  <div id="showexpe">
+				 <div class="oneexpspace"><h1>Experiment List</h1></div>
+				 <div class="oneexp" id="1"></div>
+				 <div class="oneexp" id="2"></div>
+				 <div class="oneexp" id="3"></div>
+				 <div class="oneexp" id="4"></div>
+				 <div class="oneexp" id="5"></div>
+				 <div class="pagecontrol">
+				    Page: <select name="select_page" id="select_page" onchange="pageChange()"></select>
+	                
+				 </div>
+				 
+			  </div>
+			  <div id="showoneexp">
+		 	     <div class="showoneexpClass">
+				   <h1>The Information of One Experiment</h1>
+				 </div>
+				 <div id="expdetail">
+				   <div class="oneAttribute">
+				     Study Name:
+				     <div id="expdetailStudyname" class="expdetailContent"> 
+					 </div>
+				   </div>
+				   <div class="oneAttribute">
+				     Keywords:
+					 <div id="expdetailKeywords" class="expdetailContent"> 
+					 </div>
+				   </div>
+				   <div class="oneAttribute">
+				     Type:
+				     <div  id="expdetailType" class="expdetailContent"> 
+					 </div>
+				   </div>
+				   <div class="oneAttribute" >
+				     Length:
+					 <div id="expdetailTime" class="expdetailContent"> 
+					 </div>
+				   </div>
+				   <div class="oneAttribute">
+				     Payment:
+				     <div  id="expdetailPay" class="expdetailContent"> 
+					 </div>
+				   </div>
+				   <div class="oneAttribute">
+				     Contact Information:
+					 <div  id="expdetailConIn" class="expdetailContent"> 
+				     </div>
+				   </div>
+				  
+				   <div class="oneAttributeDes">
+				      Description:
+				      <div  id="expdetailDes" class="expdetailContent"> 
+					  </div>
+				   </div>
+				   <div class="oneAttributeReq">
+				      Requirments:
+					  <div  id="expdetailReq" class="expdetailContent"> 
+					  </div>
+				   </div>
+				   <div class="oneAttribute" id="expdetailTimeF">Timeframe:</div>
+		
+				 </div>
+				 
+			  </div>
+			  
+			  
+			  
+			  <div id="showpars">
+				 <div class="onepartitle">
+				   <div class="onepartop">
+				    <h1>Participants List</h1>
+				   </div>
+				   <div class="oneparexpl">
+				     Study_id:
+					 <select id="showoneid" onchange="showOneGroup()"></select>
+				   </div>
+				 </div>
+				 
+				 <div class="onepar" id="11"></div>
+				 <div class="onepar" id="12"></div>
+				 <div class="onepar" id="13"></div>
+				 <div class="onepar" id="14"></div>
+				 <div class="onepar" id="15"></div>
+				 <div class="controlselect">
+				    Page:
+					<select id="parslistpage" onchange="showOnePagePar()"></select>
+				 
+				 </div>
+			  </div>
+			  
+			  
+			  
+			  <div id="showinter">
+				 <div class="oneexp">
+				   <h1>Interested Participants List</h1>
+				 </div>
+				 <div class="oneexp">One Interested Experiment</div>
+				 <div class="oneexp">One Interested Experiment</div>
+				 <div class="oneexp">One Interested Experiment</div>
+				 <div class="oneexp">One Interested Experiment</div>
+				 <div class="oneexp">One Interested Experiment</div>
+				 <div class="oneexp">One Interested Experiment</div>
+			  </div>
+			  
+			  
+			  <div id="createnew">
+			    <form>
+				<div class="infoOneLine"></div>
+				<div class="infoOneLine">
+				 <div class="content">
+				   Study Name:  
+				 </div>
+				  <input type="text" id="studynameCN" class="createnewinput"/>
+				</div>
+				<div class="infoOneLine">
+				 <div class="content">
+				   Keywords:  
+				 </div> 
+		  	     <input type="text" id="keywordsCN" />
+				 <div class="descri">
+				   (please use # to split)  
+				 </div> 
+				</div>
+				<div class="infoOneLine">
+				  <div class="content">
+				    Study Type: 
+				  </div>  
+				  <select id="studytypeCN">
+				    <option  value = "philosophy">Philosophy</option>
+				    <option  value = "economics">Economics</option>
+				    <option  value = "laws">Laws</option>
+				    <option  value = "pedagogy">Pedagogy</option>
+				    <option  value = "literature">Literature</option>
+				    <option  value = "history">History</option>
+				    <option  value = "science">Science</option>
+				    <option  value = "engineering">Engineering</option>
+				    <option  value = "agronomy">Agronomy</option>
+				    <option  value = "medicine">Medicine</option>
+				    <option  value = "arts">Arts</option>
+				    <option  value = "management">Management</option>
+				  </select>
+				</div>
+				<div class="infoOneLine">
+				 <div class="content">
+				   Start Time: 
+				 </div>
+				 
+                   <select class="time" id="startMonCN" onchange="checkStartDay()">
+				     <option value="0">mon</option>
+                  	 <option  value = "01">01</option>
+                  	 <option  value = "02">02</option>
+                  	 <option  value = "03">03</option>
+                  	 <option  value = "04">04</option>
+                  	 <option  value = "05">05</option>
+                  	 <option  value = "06">06</option>
+                  	 <option  value = "07">07</option>
+                  	 <option  value = "08">08</option>
+                  	 <option  value = "09">09</option>
+                  	 <option  value = "10">10</option>
+                  	 <option  value = "11">11</option>
+                  	 <option  value = "12">12</option>
+				   </select>	
+                   <select class="time" id="startDayCN"  onchange="checkStartDay()">
+                  	 <option  value = "0">day</option>
+                  	 <option  value = "01">01</option>	   
+                  	 <option  value = "02">02</option>	   
+                  	 <option  value = "03">03</option>	   
+                  	 <option  value = "04">04</option>	   
+                  	 <option  value = "05">05</option>	   
+                  	 <option  value = "06">06</option>	   
+                  	 <option  value = "07">07</option>	   
+                  	 <option  value = "08">08</option>	   
+                  	 <option  value = "09">09</option>	   
+                  	 <option  value = "10">10</option>	   
+                  	 <option  value = "11">11</option>	   
+                  	 <option  value = "12">12</option>	   
+                  	 <option  value = "13">13</option>	   
+                  	 <option  value = "14">14</option>	   
+                  	 <option  value = "15">15</option>	   
+                  	 <option  value = "16">16</option>	   
+                  	 <option  value = "17">17</option>	   
+                  	 <option  value = "18">18</option>	   
+                  	 <option  value = "19">19</option>	   
+                  	 <option  value = "20">10</option>	   
+                  	 <option  value = "21">21</option>	   
+                  	 <option  value = "22">22</option>	   
+                  	 <option  value = "23">23</option>	   
+                  	 <option  value = "24">24</option>	   
+                  	 <option  value = "25">25</option>	   
+                  	 <option  value = "26">26</option>	   
+                  	 <option  value = "27">27</option>	   
+                  	 <option  value = "28">28</option>	   
+                  	 <option  value = "29">29</option>	   
+                  	 <option  value = "30">30</option>	   
+                  	 <option  value = "31">31</option>	   
+				   </select>					   
+				  <select class="time" id="startYearCN" onchange="checkStartDay()">
+                  	 <option  value = "0">year</option>
+						<option  value = "2014">2014</option>
+				     <option  value = "2015">2015</option>
+				     <option  value = "2016">2016</option>		   
+				     <option  value = "2017">2017</option>		   
+				     <option  value = "2018">2018</option>		   
+				     <option  value = "2019">2019</option>		   
+				   </select>
+				</div>
+				
+				<div class="infoOneLine">
+				 <div class="content">
+				   End Time: 
+				 </div>
+				 <select class="time" id="endMonCN" onchange="checkEndDay()">
+				     <option value="0">mon</option>
+                  	 <option  value = "01">01</option>
+                  	 <option  value = "02">02</option>
+                  	 <option  value = "03">03</option>
+                  	 <option  value = "04">04</option>
+                  	 <option  value = "05">05</option>
+                  	 <option  value = "06">06</option>
+                  	 <option  value = "07">07</option>
+                  	 <option  value = "08">08</option>
+                  	 <option  value = "09">09</option>
+                  	 <option  value = "10">10</option>
+                  	 <option  value = "11">11</option>
+                  	 <option  value = "12">12</option>
+				   </select>	
+                   <select class="time" id="endDayCN" onchange="checkEndDay()">
+                  	 <option  value = "0">day</option>
+					 <option  value = "01">01</option>	   
+                  	 <option  value = "02">02</option>	   
+                  	 <option  value = "03">03</option>	   
+                  	 <option  value = "04">04</option>	   
+                  	 <option  value = "05">05</option>	   
+                  	 <option  value = "06">06</option>	   
+                  	 <option  value = "07">07</option>	   
+                  	 <option  value = "08">08</option>	   
+                  	 <option  value = "09">09</option>	   
+                  	 <option  value = "10">10</option>	   
+                  	 <option  value = "11">11</option>	   
+                  	 <option  value = "12">12</option>	   
+                  	 <option  value = "13">13</option>	   
+                  	 <option  value = "14">14</option>	   
+                  	 <option  value = "15">15</option>	   
+                  	 <option  value = "16">16</option>	   
+                  	 <option  value = "17">17</option>	   
+                  	 <option  value = "18">18</option>	   
+                  	 <option  value = "19">19</option>	   
+                  	 <option  value = "20">10</option>	   
+                  	 <option  value = "21">21</option>	   
+                  	 <option  value = "22">22</option>	   
+                  	 <option  value = "23">23</option>	   
+                  	 <option  value = "24">24</option>	   
+                  	 <option  value = "25">25</option>	   
+                  	 <option  value = "26">26</option>	   
+                  	 <option  value = "27">27</option>	   
+                  	 <option  value = "28">28</option>	   
+                  	 <option  value = "29">29</option>	   
+                  	 <option  value = "30">30</option>	   
+                  	 <option  value = "31">31</option>	   
+				   </select>					   
+				  <select class="time" id="endYearCN" onchange="checkEndDay()">
+				     <option  value = "0">year</option>
+                  	 <option  value = "2014">2014</option>
+				     <option  value = "2015">2015</option>
+				     <option  value = "2016">2016</option>		   
+				     <option  value = "2017">2017</option>		   
+				     <option  value = "2018">2018</option>		   
+				     <option  value = "2019">2019</option>		   
+				   </select>  
+				</div>
+				
+				<div class="infoOneLine">
+				 <div class="content">
+				   Payment: 
+				 </div>
+ 				 <div class="paymentType">
+				   $<input type="text" id="paymentCN" dir='rtl'/>
+				   <select id="paytypeCN" >
+				     <option value="per hour">Per hour</option>
+				     <option value="per day">Per day</option>
+				     <option value="total amount">Total amount</option>
+				   </select>
+				 </div>
+				</div>
+				
+				<div class="infoReqLine">
+				 <div class="content">
+				   Requirement:
+				 </div>
+                 <textarea rows="4" cols="51" id="requerimentCN">	
+                 </textarea>		   
+				</div>
+				<div class="infoDesLine">
+				 <div class="content">
+				   Description: 
+				 </div>
+				 <textarea rows="8" cols="51" id="descriptionCN">	
+                 </textarea>
+				</div>
+				
+				 <input type="button" value="Submit" class="createNewButtonA" onClick="sendCreateNewInfo()"/>
+			     <input type="reset" value="Reset" class="createNewButtonB" />
+			   </form>
+				
+				
+			     
+			     
+			  
+			  </div>
+			  <div id="calender">
+				<div class="control">
+				 <input type="button" value="Get" onclick="getCalender()"/>
+				 <input type="button" value="Insert" onclick="insertCalender()"/>
+				 <input type="button" value="Authenticate" style="width:150px" onclick="authenticate()"/>
+				</div>	
+				
+		        <div id="showGetDiv">
+				  <div class="onegetitem">
+				   <div id="title1" class="gettitle">
+				   
+				   </div>
+				   <div id="time1" class="gettime">
+				    
+				   </div>
+				   <div class="getcontent">
+				   
+				   </div>
+				 </div>
+				<div class="onegetitem">
+				   <div id="title2" class="gettitle">
+				    
+				   </div>
+				   <div id="time2" class="gettime">
+				   
+				   </div>
+				   <div class="getcontent">
+				  
+				   </div>
+				 </div>
+				 <div class="onegetitem">
+				   <div id="title3" class="gettitle">
+				   
+				   </div>
+				   <div id="time3" class="gettime">
+				  
+				   </div>
+				   <div class="getcontent">
+				    
+				   </div>
+				 </div>
+				 <div class="onegetitem">
+				   <div id="title4" class="gettitle">
+				  
+				   </div>
+				   <div id="time4" class="gettime">
+				  
+				   </div>
+				   <div class="getcontent">
+				   
+				   </div>
+				 </div>
+				 <div class="onegetitem">
+				   <div id="title5" class="gettitle">
+				    
+				   </div>
+				   <div id="time5" class="gettime">
+				    
+				   </div>
+				   <div class="getcontent">
+				    
+				   </div>
+				 </div>
+
+				</div>
+		        <div id="showInsertDiv">
+					<div class="oneevent">Gmail Address:
+				    <input type="email" id="gmail_address"/>
+				  </div>
+				  <div class="oneeventtime">Start Time:
+				   <div class="time">
+				    year:<input type="text" id="startyear" placeholder="2014"/>
+				    month:<input type="text" id="startmonth" placeholder="01"/>
+				    day:<input type="text" id="startday" placeholder="01"/>
+				    hour:<input type="text" id="starthour" placeholder="00"/>
+				    minute:<input type="text" id="startminute" placeholder="00"/>
+				   </div>
+   				  </div>
+				  <div class="oneeventtime">End Time:
+				  <div class="time">
+				    year:<input type="text" id="endyear" placeholder="2014">
+				    month:<input type="text" id="endmonth" placeholder="01"/>
+				    day:<input type="text" id="endday" placeholder="01"/>
+				    hour:<input type="text" id="endhour"placeholder="00"/>
+				    minute:<input type="text" id="endminute" placeholder="00"/>
+				   </div>
+				  </div>
+				  <div class="oneevent2">Content:
+				    <textarea rows="10" cols="30" id="calenderContent">	
+                    </textarea>	
+
+                    <input type="button" value="Submit" onclick="insertCalendarEvent()"/>					
+				  </div>
+				  
+				</div>
+					
+			  </div>
+			  
+			   <div id="editinformation">			
+                 <form>			   
+				  <div class="oneEditInformation">
+				    Username:
+					<input type="text" id="editUsername" />
+				  </div>				  
+				  <div class="oneEditInformation">
+				    Password:
+					<input type="password" id="editPassword" onclick="changePassword()"/>
+				  </div>	
+                  <div class="oneEditInformation">
+				    ReenterPassword:
+					<input type="password" id="editReenter" onchange="checkPassword()" />
+				  </div>					  
+				  <div class="oneEditInformation">
+                    Email Address:				   
+					<input type="text" id="editEmail" />
+				  </div>
+				  <div class="oneEditInformation">
+				   Lastname: 
+				   <input type="text" id="editLastname" />
+				  </div>
+				  <div class="oneEditInformation">
+				   Firstname: 
+				   <input type="text" id="editFirstname" />
+				  </div>
+				  <div class="oneEditInformation">
+				   Gender:  
+				   <select id="editGender" name="editGender">
+				      <option value ="male">Male</option>  
+                      <option value ="female">Female</option>			 
+                   </select>
+				  </div>
+				  <div class="oneEditInformation">
+				   Age: 
+				   <input type="text" id="editAge" />
+				  </div>
+				  <div class="oneEditInformation">
+				   Occupation: 
+				   <select name="occupation" id="editOccupation">  
+                      <option value ="undergraduate student">Undergraduate Student</option>
+                      <option value ="graduate student">Graduate Student</option> 				 
+                      <option value ="teacher">Teacher</option>
+                      <option value ="doctor">Doctor</option>
+				      <option value ="lawyer">Lawyer</option>
+				      <option value ="accountant">Accountant</option>
+				      <option value ="manager">Manager</option>
+		   	          <option value ="salesperson">Salesperson</option>
+			          <option value ="engineer">Engineer</option>
+				      <option value ="other">Other</option>
+                   </select>
+				  </div>
+				  <div class="oneEditInformation">
+				   Country: 
+				   <input type="text" id="editCountry" />
+				  </div>
+				  <div class="oneEditInformation">
+				   State: 
+				   <input type="text" id="editState" />
+				  </div>
+				  <div class="oneEditInformation">
+				    City: 
+				   <input type="text" id="editCity" />
+				  </div>
+				  <div class="oneEditInformationButton">
+				    <input type="button" value="Update" onclick="updateInformation()"/>
+				  </div>	
+				  </form>
+			  </div>
+			  
+			  
+			  </div>
+			</div>
+			</div>
+		 
+	  <!--end of the page-->
+	</section>
+
+
+
+    <footer>
+     <div id="footer-content">
+     	<div id="footer-bg" class="container">
+	   	   <div id="column1">
+			 <h2>Welcome to ReSearch</h2>
+			 <p>Our website allows researchers to post information about research experiments which requires recruiting human participants.</p>
+			   </div>
+		   <div id="column2">
+			<h2>Recommended Links</h2>
+			   <ul>
+				 <li><a href="#">Recommended links</a></li>
+				 <li><a href="#">Recommended links</a></li>
+ 			     <li><a href="#">Recommended links</a></li>
+				 <li><a href="#">Recommended links</a></li>
+				 <li><a href="#">Recommended links</a></li>
+			  </ul>
+		   </div>
+	    </div>
+      </div>
+		 
+      <div id="footer">
+		 <p>Copyright © 2014 Group 4. All rights reserved.	</p>
+      </div>		 
+    </footer>
+  </body>
+</html>

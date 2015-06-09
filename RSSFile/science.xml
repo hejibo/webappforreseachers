@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- generator="FeedCreator 1.7.2" -->
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="">
+        <title>science news</title>
+        <description>All studies within the domain of science</description>
+        <link>http://www.dailyphp.net/news</link>
+       <dc:date>2014-04-24T12:48:53+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource=""/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <item rdf:about="">
+        <dc:format>text/html</dc:format>
+        <dc:date>1970-01-01T00:00:00+01:00</dc:date>
+        <dc:source>23.00 per hour</dc:source>
+        <dc:creator>Kaili Kan</dc:creator>
+        <title>The Effects of Drinking on Offspring: An Historical Survey of the American and British Literature</title>
+        <link></link>
+        <description>Current research on the effects on offspring of drinking during pregnancy has revived interest in an extremely old topic. 	
+                 </description>
+    </item>
+</rdf:RDF>

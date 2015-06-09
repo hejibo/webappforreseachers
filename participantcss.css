@@ -1,0 +1,478 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: url(img/img01.jpg) repeat-x left top;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #3A4648;
+}
+/*Header and Footer container*/
+.container {
+	width: 1000px;
+	margin: 0px auto;
+}
+
+
+
+/* Header */
+
+#header {
+	width: 900px;
+	height: 105px;
+	border:2px solid black;
+}
+
+/* Logo */
+
+#logo {
+	float: left;
+	width: 300px;
+	height:100px;
+	color: #FFFFFF;
+}
+
+#logo h1 {
+	letter-spacing: -2px;
+	font-size: 3.8em;
+}
+#logo p {
+	margin: 0;
+	padding: 0px 0 0 0px;
+	letter-spacing: -1px;
+	font: normal 18px Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	margin-left:15px;
+}
+
+/*Sign out*/
+#signout{
+	width: 100px;
+	height:20px;
+	color: #FFFFFF;
+	margin-left:800px;
+	margin-top:80px;
+	font: normal 18px Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+}
+
+/* Page */
+
+#page {
+	width: 1300px;
+	height:900px;
+	margin: 0 auto;
+    background: url(img/img02.jpg);
+	margin-top:8px;
+    background-repeat:no-repeat;	
+	}
+#inpage {
+	width: 1000px;
+	height:900px;
+	margin: 0 auto;
+	}	
+	/*Search Part*/
+#searchdiv{
+    width: 600px;
+	height:70px;
+	margin: 0 auto;
+    margin-top:5px;
+}
+#expcontent{
+    width: 1000px;
+	height:800px;
+	margin: 0 auto;
+	margin-top:10px;
+}
+#showoneexp{
+ display:none;
+}
+#expdetail{
+    float:right;    
+    width:750px;   
+    height:450px;
+}
+#showexperiment{
+
+}
+#showsubscribed{
+ display:none;
+}
+#showinterested{
+display:none;
+}
+#shownotification{
+display:none;
+}
+.oneexpbuttons{
+}
+/*--------one study information starts-----------*/
+
+.showoneexpClass {
+  width:500px;
+  height:60px;
+  border:1px solid green;
+  margin-left:245px;
+}
+.oneAttribute{
+  width:700px;
+  height:30px;
+  border: 1px solid green;  
+  margin-top:10px;
+  margin-left:auto;
+  margin-right:auto;
+  font-size:14px;
+  
+}	
+.oneAttributeDes
+{
+  width:700px;
+  height:150px;
+  border: 1px solid green;  
+  margin-top:10px;
+  margin-left:auto;
+  margin-right:auto;
+  font-size:14px;
+}
+
+.expdetailDes{
+  width:560px;
+  height:150px;
+  border: 1px solid green;  
+  float:right;
+}
+.oneAttributeReq{
+  width:700px;
+  height:150px;
+  border: 1px solid green;  
+  margin-top:10px;
+  margin-left:auto;
+  margin-right:auto;
+  font-size:14px;
+}
+#expdetail{
+    float:right;    
+    width:750px;   
+    height:700px;
+    border:3px solid yellow;
+}
+.expdetailContent{
+  width:560px;
+  height:30px;
+  border: 1px solid green;  
+  float:right;
+}
+/*--------one study information ends-----------*/
+/*-----Navigation starts-----*/
+
+.expnav{
+    width: 230px;
+	height:800px;
+    float:left;
+}
+
+.expnav ul li{
+   list-style-type:none;
+}
+.expnav ul li a{
+   width:180px;
+   height:50px;
+   line-height:30px;
+   color:blue;
+   font-size:17px;
+   display:block;
+   text-decoration:none;
+   border:2px solid pink;
+}
+.expnav ul li a:active{
+	background-color:2px solid black;
+	 
+}
+/*-----User Type Navigation ends-----*/
+
+
+/*-----Register Part Starts-----*/
+.register{
+    width: 900px;
+	height:700px;
+	margin:0 auto;
+	margin-top:20px;
+    padding:15px;
+	}
+.register input{
+
+  width:230px;
+  height:30px;
+  margin-top:13px;
+}
+.register select{
+
+  width:230px;
+  height:30px;
+  margin-top:18px;
+}
+.formdiv{
+    width: 900px;
+	height:650px;
+    border:1px solid black;
+}
+.formleft{
+    font-family:"Times New Roman",Georgia,Serif;
+    font-size:25px;
+    color:#003333;
+    width: 220px;
+	height:600px;
+    float:left;
+    border:1px solid blue;
+    margin-top:15px;
+}
+.formright{
+    float:left;
+	 width: 600px;
+    border:1px solid blue;
+}
+.space{
+  height:20px;
+  
+}
+
+/*-----Register Part Ends-----*/
+	
+	
+	
+/* Two Column Footer Content */
+
+#footer-content {
+	background: #4D596A;
+	color: #D6E2F0;
+}
+
+#footer-content a {
+	color: #92A9B6;
+}
+
+#footer-bg {
+	overflow: hidden;
+	width: 890px;
+	padding: 30px 55px 50px 55px;
+}
+
+#footer-content h2 {
+	margin: 0px;
+	padding: 0px 0px 20px 0px;
+	letter-spacing: -1px;
+	font-size: 26px;
+	color: #FFFFFF;
+}
+
+#footer-content ul {
+	margin: 0px;
+	padding: 0px 0px 0px 20px;
+}
+
+#footer-content a {
+}
+
+#column1 {
+	float: left;
+	width: 390px;
+	margin-right: 30px;
+}
+
+#column2 {
+	float: left;
+	margin-left:80px;
+	width: 380px;
+}
+
+/*--------------Show one experiment Part Ends------------------------*/
+
+
+.oneexpbuttons{
+
+}
+.oneexp{
+    float:right;    
+    width:750px;   
+    height:135px;
+    border:1px solid yellow;
+}	
+.oneexpspace{
+    float:right;    
+    width:750px;   
+    height:50px;
+    border:1px solid yellow;
+}	
+	
+.pagecontrol{
+    float:right;    
+    width:150px;   
+    height:30px;
+    margin-top:20px;
+	font-size:15px;
+    border:1px solid yellow;
+}
+
+.pagecontrol select{
+  width:60px;
+  height:25px; 
+  font-size:15px;
+  margin-left:15px;
+}
+
+/*-------------Edit Information Part Starts-------------------------*/
+#editinformation{
+  display:none;
+  width:765px;
+  height:795px;
+  margin-left:230px;
+  border: 3px solid orange;
+  font-size:20px;
+}
+.oneEditInformation{
+  width:480px;
+  height:50px;
+  margin-left:auto;
+  margin-right:auto;
+  border: 1px solid yellow;
+  margin-top:8px;
+}
+
+.oneEditInformation input{
+  width:300px;
+  height:35px;
+  border: 1px solid orange;
+  float:right;
+  font-size:15px;
+}
+
+.oneEditInformation select{
+  width:300px;
+  height:35px;
+  border: 1px solid blue;
+  float:right;
+  font-size:15px;
+
+}
+
+.oneEditInformationButton{
+  width:100px;
+  height:58px;
+  margin-left:auto;
+  margin-right:auto;
+  border: 1px solid yellow;
+}
+
+.oneEditInformationButton input{
+  width:100px;
+  height:38px;
+  margin-top:10px;
+  font-size:20px;
+
+}
+
+/*--------------Edit Information Part Ends------------------------*/
+
+
+/*-------------------search part---------------*/
+	/*Search Part*/
+.searchdiv{
+    width: 600px;
+	height:95px;
+	margin-left:240px;
+	font-size:20px;
+}
+
+.searchdiv .searchinfo{
+    width: 350px;
+	height:25px;
+	font-size:15px;
+	margin-left:10px;
+}
+.searchdiv .enter{
+    width: 350px;
+	height:25px;
+	font-size:12px;
+}
+
+.searchdiv input{
+    width: 80px;
+	height:35px; 
+	margin-left:10px;
+}
+
+#showsearch{
+  border:1px solid pink;
+  display:none;
+  width:770px;
+  height:800px;
+  margin-left:230px;
+}
+
+
+
+/*-------------show all interest------------------*/
+.oneinter{
+    float:right;    
+    width:750px;   
+    height:135px;
+    border:1px solid yellow;
+}	
+
+/* Footer */
+
+#footer {
+	height: 50px;
+	margin: 0 auto;
+	padding: 0px 0 15px 0;
+	background: #4D596A;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#footer p {
+	margin: 0;
+	padding-top: 30px;
+	line-height: normal;
+	font-size: 10px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #92A9B6;
+}
+
+#footer a {
+	color: #92A9B6;
+}
+
+#marketing {
+	overflow: hidden;
+	margin-bottom: 30px;
+	padding: 20px 0px 10px 0px;
+	border-top: 1px solid #E7EBED;
+	border-bottom: 1px solid #E7EBED;
+}
+
+#marketing .text1 {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	letter-spacing: -2px;
+	text-transform: lowercase;
+	font-size: 34px;
+	color: #345E9B;
+}
+
+#marketing .text2 {
+	float: right;
+}
+
+#marketing .text2 a {
+	display: block;
+	width: 252px;
+	height: 38px;
+	padding: 15px 0px 0px 0px;
+	background: url(images/img07.jpg) no-repeat left top;
+	letter-spacing: -2px;
+	text-align: center;
+	text-transform: lowercase;
+	font-size: 30px;
+	color: #FFFFFF;
+}

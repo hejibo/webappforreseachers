@@ -1,0 +1,252 @@
+
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+body {
+	margin: 0;
+	padding: 0;
+	background: url(img/img01.jpg) repeat-x left top;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #3A4648;
+}
+
+
+
+.container {
+	width: 1000px;
+	margin: 0px auto;
+	
+}
+
+/* Header */
+
+#header {
+	width: 900px;
+	height: 105px;
+}
+
+/* Logo */
+
+#logo {
+	float: left;
+	width: 300px;
+	color: #FFFFFF;
+}
+
+#logo h1 {
+	letter-spacing: -2px;
+	font-size: 3.8em;
+}
+#logo p {
+	margin: 0;
+	padding: 0px 0 0 0px;
+	letter-spacing: -1px;
+	font: normal 18px Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	margin-left:15px;
+}
+
+/* Page */
+
+#page {
+	width: 1300px;
+	height:900px;
+	margin: 0 auto;
+	margin-top:10px;
+    background: url(img/img02.jpg);
+    background-repeat:no-repeat;	
+
+	}
+	
+
+/*-----User Type Navigation starts-----*/
+.typenav{
+    width: 1000px;
+	height:80px;
+	margin:0 auto;
+    padding:15px;
+}
+.typenav ul li{
+   float:left;
+   margin-right:10px;
+   list-style-type:none;
+}
+.findpage{
+  
+   background:url(img/rg.png);
+}
+.typenav ul li a{
+   width:300px;
+   height:80px;
+   line-height:30px;
+   color:#000000;
+   font-size:30px;
+   display:block;
+   text-align:center;
+   text-decoration:none;
+}
+.typenav ul li a:hover{
+   width:300px;
+   height:80px;
+   line-height:30px;
+   background:red;
+   background:url(img/rg.png);
+} 
+/*-----User Type Navigation ends-----*/
+
+
+/*-----Register Part Starts-----*/
+.register{
+    width: 900px;
+	height:700px;
+	margin:0 auto;
+	margin-top:20px;
+    padding:15px;
+	}
+.register input{
+
+  width:230px;
+  height:30px;
+  margin-top:16px;
+}
+.register select{
+
+  width:230px;
+  height:30px;
+  margin-top:18px;
+}
+.formdiv{
+    width: 900px;
+	height:650px;
+}
+.formleft{
+    font-family:"Times New Roman",Georgia,Serif;
+    font-size:25px;
+    color:#003333;
+    width: 220px;
+	height:600px;
+    float:left;
+    margin-top:18px;
+}
+.formright{
+     float:left;
+	 width: 600px;
+	 height:670px;
+}
+
+.space{
+  height:23px;
+  
+}
+
+/*-----Register Part Ends-----*/
+	
+	
+	
+/* Two Column Footer Content */
+
+#footer-content {
+	background: #4D596A;
+	color: #D6E2F0;
+}
+
+#footer-content a {
+	color: #92A9B6;
+}
+
+#footer-bg {
+	overflow: hidden;
+	width: 890px;
+	padding: 30px 55px 50px 55px;
+}
+
+#footer-content h2 {
+	margin: 0px;
+	padding: 0px 0px 20px 0px;
+	letter-spacing: -1px;
+	font-size: 26px;
+	color: #FFFFFF;
+}
+
+#footer-content ul {
+	margin: 0px;
+	padding: 0px 0px 0px 20px;
+}
+
+#footer-content a {
+}
+
+#column1 {
+	float: left;
+	width: 390px;
+	margin-right: 30px;
+}
+
+#column2 {
+	float: left;
+	margin-left:80px;
+	width: 380px;
+}
+
+/* Footer */
+
+#footer {
+	height: 50px;
+	margin: 0 auto;
+	padding: 0px 0 15px 0;
+	background: #4D596A;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#footer p {
+	margin: 0;
+	padding-top: 30px;
+	line-height: normal;
+	font-size: 10px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #92A9B6;
+}
+
+#footer a {
+	color: #92A9B6;
+}
+
+#marketing {
+	overflow: hidden;
+	margin-bottom: 30px;
+	padding: 20px 0px 10px 0px;
+	border-top: 1px solid #E7EBED;
+	border-bottom: 1px solid #E7EBED;
+}
+
+#marketing .text1 {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	letter-spacing: -2px;
+	text-transform: lowercase;
+	font-size: 34px;
+	color: #345E9B;
+}
+
+#marketing .text2 {
+	float: right;
+}
+
+#marketing .text2 a {
+	display: block;
+	width: 252px;
+	height: 38px;
+	padding: 15px 0px 0px 0px;
+	background: url(images/img07.jpg) no-repeat left top;
+	letter-spacing: -2px;
+	text-align: center;
+	text-transform: lowercase;
+	font-size: 30px;
+	color: #FFFFFF;
+}

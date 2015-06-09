@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>Participant Main Page</title>
+     <meta charset="UTF-8" />
+	 <link rel="stylesheet" type="text/css" href="participantcss.css" />
+	 <script src="participantjs.js"></script>
+  </head>
+  
+  <body onload="initSelect()">
+    <header>
+      <div id="header" class="container">
+		<div id="logo">
+			<h1>ReSearch<p>Find what you want</p></h1>
+		</div>
+		<div id="signout">
+		   <input type="button" name="signout" value="Sign out" onClick="signout()"/>
+		</div>
+	  </div>
+    </header>
+	
+    <section>
+	  <!--start of the page-->
+		<div id="page">
+		  <div id="inpage">
+ 		       <div class="searchdiv">
+ 			   <br/>
+ 			   <input type="text" id="searchkeyword" class="enter" onclick="changeSearch()"/>
+ 			   <input type="button" value="Search" onclick="searchKeyWords()"/>
+ 			   <div class="searchinfo">
+ 			    (Please use * to split key words.)
+ 			   </div>
+  		     </div>
+			
+			<div id="expcontent">
+			  <div class="expnav">
+				 <h1>Navigation</h1>
+				 <ul>
+				  <li><a href="javascript:initSelect()">All Research</a></li>
+				  <li><a href="javascript:showinterested();">Show intersest</a></li>
+				  <li><a href="composemesssage.html">Message</a></li>
+			      <li><a href="javascript:editInformation();">Edit My Information</a></li>
+				 </ul>
+			  </div>
+				
+			  <div id="showsearch">
+			     <div class="oneexpspace"><h1>Search Results</h1></div>
+				 <div class="oneexpcon" id="6"></div>
+				 <div class="oneexpcon" id="7"></div>
+				 <div class="oneexpcon" id="8"></div>
+				 <div class="oneexpcon" id="9"></div>
+				 <div class="oneexpcon" id="10"></div>
+				 <div class="pagecontrol">
+				    Page: <select name="search_result" id="search_result" onchange="pageChange()"></select>
+	                
+				 </div>
+			  </div>
+			  <div id="showexperiment">
+				 <div class="oneexpspace"><h1>Experiment List</h1></div>
+				 <div class="oneexp" id="1"></div>
+				 <div class="oneexp" id="2"></div>
+				 <div class="oneexp" id="3"></div>
+				 <div class="oneexp" id="4"></div>
+				 <div class="oneexp" id="5"></div>
+				 <div class="pagecontrol">
+				    Page: <select name="select_page" id="select_page" onchange="pageChange()"></select></div>
+			  </div>
+			  <div id="showinterested">
+				 <div class="oneexp"><h1>Interested Experiment List(Show the study you have selected as I'm interested)</h1></div>
+				 <div class="oneexp" id="11"></div>
+				 <div class="oneexp" id="12"></div>
+				 <div class="oneexp" id="13"></div>
+				 <div class="oneexp" id="14"></div>
+				 <div class="oneexp" id="15"></div>
+				 <div class="pagecontrol" display:none>
+					 Page: <select name="select_page" id="select_page_2" onchange="pageChange()"></select></div>
+			  </div>
+			  <div id="showoneexp">
+		 	     <div class="showoneexpClass">
+				   <h1>The Information of One Experiment</h1>
+				 </div>
+				 <div id="expdetail">
+				   <div class="oneAttribute">
+				     Study Name:
+						 <div id="expdetailStudyname" class="expdetailContent"> 
+					 </div>
+				   </div>
+				   <div class="oneAttribute">
+				     Keywords:
+						 <div id="expdetailKeywords" class="expdetailContent"> 
+					 </div>
+				   </div>
+				   <div class="oneAttribute">
+				     Type: 
+						 <div  id="expdetailType" class="expdetailContent"> 
+						 </div>
+					 </div>
+				   <div class="oneAttribute" >
+				     Length:
+					 <div id="expdetailTime" class="expdetailContent"> 
+					 </div>
+				   </div>
+				   <div class="oneAttribute">
+				     Payment:
+				     <div  id="expdetailPay" class="expdetailContent"> 
+					 </div>
+				   </div>
+				   <div class="oneAttribute">
+				     Contact Information:
+					 <div  id="expdetailConIn" class="expdetailContent"> 
+				     </div>
+				   </div>
+				  
+				   <div class="oneAttributeDes">
+				      Description:
+				      <div  id="expdetailDes" class="expdetailContent"> 
+					  </div>
+				   </div>
+				   <div class="oneAttributeReq">
+				      Requirments:
+					  <div  id="expdetailReq" class="expdetailContent"> 
+					  </div>
+				   </div>
+				   <div class="oneAttribute" id="expdetailTimeF">Timeframe:</div>
+	 <div class="oneexpbuttons">
+	    <input type="button" value="I want to Participate" onclick='interest()'/>
+	    <a href="composemesssage.html"><input type="button" value="Leave a Message"/></a>				  
+	 </div>
+				 </div>
+				 
+			 
+			  </div>
+			   <div id="editinformation">
+					 <form>			   
+				  <div class="oneEditInformation">
+				    Username:
+					<input type="text" id="editUsername" />
+				  </div>				  
+				  <div class="oneEditInformation">
+				    Password:
+					<input type="password" id="editPassword" onclick="changePassword()"/>
+				  </div>	
+					<div class="oneEditInformation">
+				    ReenterPassword:
+					<input type="password" id="editReenter" onchange="checkPassword()" /></div>					  
+				  <div class="oneEditInformation">
+                    Email Address:				   
+					<input type="text" id="editEmail" />
+				  </div>
+				  <div class="oneEditInformation">
+				   Lastname: 
+				   <input type="text" id="editLastname" />
+				  </div>
+				  <div class="oneEditInformation">
+				   Firstname: 
+				   <input type="text" id="editFirstname" />
+				  </div>
+				  <div class="oneEditInformation">
+				   Gender:  
+				   <select id="editGender" name="editGender">
+				      <option value ="male">Male</option>  
+                      <option value ="female">Female</option>			 
+                   </select>
+				  </div>
+				  <div class="oneEditInformation">
+				   Age: 
+				   <input type="text" id="editAge" />
+				  </div>
+				  <div class="oneEditInformation">
+				   Occupation: 
+				   <select name="occupation" id="editOccupation">  
+                      <option value ="undergraduate student">Undergraduate Student</option>
+                      <option value ="graduate student">Graduate Student</option> 				 
+                      <option value ="teacher">Teacher</option>
+                      <option value ="doctor">Doctor</option>
+				      <option value ="lawyer">Lawyer</option>
+				      <option value ="accountant">Accountant</option>
+				      <option value ="manager">Manager</option>
+		   	          <option value ="salesperson">Salesperson</option>
+			          <option value ="engineer">Engineer</option>
+				      <option value ="other">Other</option>
+                   </select>
+				  </div>
+				  <div class="oneEditInformation">
+				   Country: 
+				   <input type="text" id="editCountry" />
+				  </div>
+				  <div class="oneEditInformation">
+				   State: 
+				   <input type="text" id="editState" />
+				  </div>
+				  <div class="oneEditInformation">
+				    City: 
+				   <input type="text" id="editCity" />
+				  </div>
+				  <div class="oneEditInformationButton">
+				    <input type="button" value="Update" onclick="updateInformation()"/>
+				  </div>	
+				  </form>
+			  </div>
+			</div>
+			</div>
+		  </div>
+		  
+		</div>
+	  <!--end of the page-->
+	</section>
+
+
+
+    <footer>
+     <div id="footer-content">
+     	<div id="footer-bg" class="container">
+	   	   <div id="column1">
+			 <h2>Welcome to ReSearch</h2>
+			 <p>Our website allows researchers to post information about research experiments which requires recruiting human participants.</p>
+		   </div>
+		   <div id="column2">
+			<h2>Recommended Links</h2>
+			   <ul>
+				 <li><a href="#">Recommended links</a></li>
+				 <li><a href="#">Recommended links</a></li>
+ 			     <li><a href="#">Recommended links</a></li>
+				 <li><a href="#">Recommended links</a></li>
+				 <li><a href="#">Recommended links</a></li>
+			  </ul>
+		   </div>
+	    </div>
+      </div>
+		 
+      <div id="footer">
+		 <p>Copyright © 2014 Group 4. All rights reserved.	</p>
+      </div>		 
+    </footer>
+  </body>
+</html>

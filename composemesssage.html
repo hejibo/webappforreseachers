@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>Compose messsage Page</title>
+     <meta charset="UTF-8" />
+	 <link rel="stylesheet" type="text/css" href="composemesssage.css" />
+	 <script src="composemesssage.js"></script>
+  </head>
+  
+  <body>
+    <header>
+      <div id="header" class="container">
+		<div id="logo">
+			<h1>ReSearch<p>Find what you want</p></h1>
+		</div>
+		<div id="signout">
+		   <input type="button" name="signout" value="Sign out" onClick="signout()"/>
+		</div>
+	  </div>
+    </header>
+	
+    <section>
+	  <!--start of the page-->
+		<div id="page">
+		  <div id="inpage">
+  		   <form>
+		   <div class="addressinfo">
+		    <div class="addleft">
+		     To:</br></br>
+		     Subject:
+			 </div>
+			 <div>
+			 <input type="email" id="emailTo"/></br></br>
+			 <input type="text" id="emailSubject"/>
+			 </div>
+		   </div>
+		   <div class="contentinfo">
+		     <textarea rows="24" cols="62" id="emailContent"></textarea>
+		   </div>
+		   <div class="buttoninfo">
+		     <input type="button" value="Send" onclick="sendEmail()"/> 
+			 <input type="reset" value="Clear"/> 
+			 <input type="button" value="Return" onclick="returnToPage()"/>
+			 
+		   </div>
+		   </form>
+		  </div>
+		  
+		</div>
+	  <!--end of the page-->
+	</section>
+
+
+
+    <footer>
+     <div id="footer-content">
+     	<div id="footer-bg" class="container">
+	   	   <div id="column1">
+			 <h2>Welcome to ReSearch</h2>
+			 <p>In posuere eleifend odio quisque semper augue mattis wisi maecenas ligula. Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum. Quisque dictum integer nisl risus, sagittis convallis, rutrum id, congue, and nibh.</p>
+		   </div>
+		   <div id="column2">
+			<h2>Recommended Links</h2>
+			  <ul>
+				 <li><a href="#">Consectetuer adipiscing elit</a></li>
+				 <li><a href="#">Metus aliquam pellentesque</a></li>
+				 <li><a href="#">Suspendisse iaculis mauris</a></li>
+				 <li><a href="#">Urnanet non molestie semper</a></li>
+				 <li><a href="#">Proin gravida orci porttitor</a></li>
+			  </ul>
+		   </div>
+	    </div>
+      </div>
+		 
+      <div id="footer">
+		 <p>Copyright © 2014 Group 4. All rights reserved.	</p>
+      </div>		 
+    </footer>
+  </body>
+</html>

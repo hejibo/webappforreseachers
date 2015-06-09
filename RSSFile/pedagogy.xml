@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- generator="FeedCreator 1.7.2" -->
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="">
+        <title>pedagogy news</title>
+        <description>All studies within the domain of pedagogy</description>
+        <link>http://www.dailyphp.net/news</link>
+       <dc:date>2014-04-24T12:45:57+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource=""/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <item rdf:about="">
+        <dc:format>text/html</dc:format>
+        <dc:date>1970-01-01T00:00:00+01:00</dc:date>
+        <dc:source>20.00 per hour</dc:source>
+        <dc:creator>Kaili Kan</dc:creator>
+        <title>Consuming Children: Education–entertainment–advertising</title>
+        <link></link>
+        <description>This draws attention to changes which are affecting education and childhood in profound ways; changes which are almost totally ignored in UK research work on education reform. It draws upon three theoretically informed, empirically based research projects</description>
+    </item>
+</rdf:RDF>

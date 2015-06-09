@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>Researcher Register Page</title>
+     <meta charset="UTF-8" />
+	 <link rel="stylesheet" type="text/css" href="researcherregister.css" />
+	 <script src="researcherregister.js"></script>
+  </head>
+  
+  <body>
+    <header>
+      <div id="header" class="container">
+		<div id="logo">
+			<h1>ReSearch<p>Find what you want</p></h1>
+		</div>
+	  </div>
+    </header>
+	
+    <section>
+	  <!--start of the page-->
+		<div id="page">
+		  <div class="typenav">
+            <ul>
+              <li><a href="register.html">Participants</br> Register</a></li>
+			  <li><a href="researcherregister.html" class="findpage">Researchers</br> Register</a></li>
+            </ul>
+          </div>
+		  
+		  <div class="register">
+ 		  <form>
+		    <div class="formdiv">
+			 <div class="formleft">
+			   Username:</br>
+			   <div class="space"></div>
+			   Password:</br>
+			   <div class="space"></div>
+			   Reenter Password:</br>
+			   <div class="space"></div>
+			   Email address:</br>
+			   <div class="space"></div>
+			    Lastname:</br>
+			   <div class="space"></div>
+			    Firstname:</br>
+			   <div class="space"></div>
+			    Gender:</br>
+			   <div class="space"></div>
+			    Age:</br>
+			   <div class="space"></div>
+			   Occupation:</br>
+			   <div class="space"></div>
+			    Country:</br>
+			   <div class="space"></div>
+			    State:</br>
+			   <div class="space"></div>
+			    City:</br>
+			   <div class="space"></div>
+			  
+			   
+			 </div>
+			 <div class="formright">
+   			   <input id = "username" type="text"  onmouseout="checkusername()"/>&nbsp; (6 - 20 characters)</br>
+			   <input type="text" id="password"/>&nbsp; (6 - 20 characters)<br/>
+			   <input type="text" id="repassword" onmouseout="checkpassword()"/>&nbsp; (6 - 20 characters)<br/>
+			   <input type="email" id="email"/><br/>
+			   <input id = "lastname" type="text"/></br>
+			   <input id = "firstname" type="text"/></br>
+			    <select name="gender" id="gender">  
+                 <option value ="male">Male</option>  
+                 <option value ="female">Female</option>			 
+               </select> </br>
+	 	       <input id = "age" type="text"/></br>
+			   <select name="occupation" id="occupation">  
+                 <option value ="undergraduate student">Undergraduate Student</option>
+                 <option value ="graduate student">Graduate Student</option> 				 
+                 <option value ="teacher">Teacher</option>
+                 <option value ="doctor">Doctor</option>
+				 <option value ="lawyer">Lawyer</option>
+				 <option value ="accountant">Accountant</option>
+				 <option value ="manager">Manager</option>
+		   	     <option value ="salesperson">Salesperson</option>
+			     <option value ="engineer">Engineer</option>
+				 <option value ="other">Other</option>
+               </select> <br/>
+			   <input id="country" type="text"/></br>
+	   	       <input id="state" type="text"/></br>
+			   <input id="city" type="text"/></br>	   	  
+			 </div>
+			 
+			 </div>
+    			 <input type="button" value="Submit"  onClick="savecontent()"/>
+				 <input type="reset" value="Reset"/>
+          </div>
+		  </form>
+		</div>
+	  <!--end of the page-->
+	</section>
+
+
+
+    <footer>
+     <div id="footer-content">
+     	<div id="footer-bg" class="container">
+	   	   <div id="column1">
+			 <h2>Welcome to ReSearch</h2>
+			<p>Our website allows researchers to post information about research experiments which requires recruiting human participants.</p>
+			 </div>
+		   <div id="column2">
+			<h2>Recommended Links</h2>
+			   <ul>
+				 <li><a href="#">Recommended links</a></li>
+				 <li><a href="#">Recommended links</a></li>
+ 			     <li><a href="#">Recommended links</a></li>
+				 <li><a href="#">Recommended links</a></li>
+				 <li><a href="#">Recommended links</a></li>
+			  </ul>
+		   </div>
+	    </div>
+      </div>
+		 
+      <div id="footer">
+		 <p>Copyright © 2014 Group 4. All rights reserved.	</p>
+      </div>		 
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>Register Page</title>
+     <meta charset="UTF-8" />
+	 <link rel="stylesheet" type="text/css" href="register.css" />
+	 <script src="register.js"></script>
+  </head>
+  
+  <body>
+    <header>
+      <div id="header" class="container">
+		<div id="logo">
+			<h1>ReSearch<p>Find what you want</p></h1>
+		</div>
+	  </div>
+    </header>
+	
+    <section>
+	  <!--start of the page-->
+		<div id="page">
+		  <div class="typenav">
+            <ul>
+              <li><a href="register.html" class="findpage">Participants<br/> Register</a></li>
+			  <li><a href="researcherregister.html">Researchers<br/> Register</a></li>
+            </ul>
+          </div>
+		  
+		  <div class="register">
+		   <form>
+		    <div class="formdiv">
+   			 <div class="formleft">
+	 		   Username:<br/>
+			   <div class="space"></div>
+			   Password:<br/> 
+			   <div class="space"></div>
+			   Reenter Password:</br>
+			   <div class="space"></div>
+			   Email address:<br/>
+			   <div class="space"></div>
+			    Lastname:<br/>
+			   <div class="space"></div>
+			    Firstname:<br/>
+			   <div class="space"></div>
+			    Gender:<br/>
+			   <div class="space"></div>
+			    Age:<br/>
+			   <div class="space"></div>
+			   Occupation:<br/>
+			   <div class="space"></div>
+			    Country:<br/>
+			   <div class="space"></div>
+			    State:<br/>
+			   <div class="space"></div>
+			    City:<br/>
+			   <div class="space"></div>
+ 			    Interests:<br/>(please select<br/> at least 1 field)
+			   <div class="space"></div>
+			 </div>
+			 <div class="formright">
+   			   <input type="text" id="username" onmouseout="checkusername()"/>&nbsp; (6 - 20 characters)<br/>
+			   <input type="text" id="password"/>&nbsp; (6 - 20 characters)<br/>
+			   <input type="text" id="repassword" onmouseout="checkpassword()"/>&nbsp; (6 - 20 characters)<br/>
+			   <input type="email" id="email"/><br/>
+			   <input type="text" id="lastname"/><br/>
+			   <input type="text" id="firstname"/><br/>
+			   <select name="gender" id="gender">  
+                 <option value ="male">Male</option>  
+                 <option value ="female">Female</option>			 
+               </select> <br/>
+			    <input type="text" id="age"/><br/>
+			  
+			    <select name="occupation" id="occupation">  
+                 <option value ="undergraduate student">Undergraduate Student</option>
+                 <option value ="graduate student">Graduate Student</option> 				 
+                 <option value ="teacher">Teacher</option>
+                 <option value ="doctor">Doctor</option>
+				 <option value ="lawyer">Lawyer</option>
+				 <option value ="accountant">Accountant</option>
+				 <option value ="manager">Manager</option>
+		   	     <option value ="salesperson">Salesperson</option>
+			     <option value ="engineer">Engineer</option>
+				 <option value ="other">Other</option>
+               </select> <br/>
+	   	       <input type="text" id="country"/><br/>
+			   <input type="text" id="state"/><br/>
+	   	       <input type="text" id="city"/><br/>
+			
+			 </div>
+			    
+			      <table class = "checktable">
+			    <tr>
+				  <td><input type="checkbox" name="checkbox" value="philosophy">Philosophy</td>
+				  <td><input type="checkbox" name="checkbox" value="economics">Economics</td>
+				</tr>
+			    <tr>
+				  <td> <input type="checkbox" name="checkbox" value="laws">Laws</td>
+				  <td> <input type="checkbox" name="checkbox" value="pedagogy">Pedagogy</td>
+				</tr>
+			     <tr>
+				  <td> <input type="checkbox" name="checkbox" value="literature">Literature</td>
+				  <td> <input type="checkbox" name="checkbox" value="history">History</td>
+				</tr>
+				 <tr>
+				  <td> <input type="checkbox" name="checkbox" value="science">Science</td>
+				  <td> <input type="checkbox" name="checkbox" value="engineering">Engineering</td>
+				</tr>
+				 <tr>
+				  <td> <input type="checkbox" name="checkbox" value="agronomy">Agronomy</td>
+				  <td> <input type="checkbox" name="checkbox" value="medicine">Medicine</td>
+				</tr>
+				 <tr>
+				  <td> <input type="checkbox" name="checkbox" value="arts">Arts</td>
+				  <td> <input type="checkbox" name="checkbox" value="management">Management</td>
+				</tr>
+				</table>
+               
+            </div>	   		
+ 			   <input type="button" value="Submit" onClick = "sendContent()"/>
+			   <input type="reset" value="Reset"/>
+			 
+			</form>
+          </div>
+		</div>
+	  <!--end of the page-->
+	</section>
+
+
+
+    <footer>
+     <div id="footer-content">
+     	<div id="footer-bg" class="container">
+	   	   <div id="column1">
+			 <h2>Welcome to ReSearch</h2>
+			 <p>Our website allows researchers to post information about research experiments which requires recruiting human participants.</p>
+			 </div>
+		   <div id="column2">
+			<h2>Recommended Links</h2>
+			  <ul>
+				 <li><a href="#">Recommended links</a></li>
+				 <li><a href="#">Recommended links</a></li>
+ 			     <li><a href="#">Recommended links</a></li>
+				 <li><a href="#">Recommended links</a></li>
+				 <li><a href="#">Recommended links</a></li>
+			  </ul>
+		   </div>
+	    </div>
+      </div>
+		 
+      <div id="footer">
+		 <p>Copyright © 2014 Group 4. All rights reserved.	</p>
+      </div>		 
+    </footer>
+  </body>
+</html>
